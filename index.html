@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Story Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>My Characters</h1>
+
+  <form id="character-form">
+    <input type="text" id="name" placeholder="Character name" required />
+    <input type="text" id="description" placeholder="Description" required />
+    <button type="submit">Add character</button>
+    <button type="button" id="cancel-edit" style="display:none;">Cancel</button>
+  </form>
+  
+  <search_bar>
+    <input type="text" id="search" placeholder="Search characters..." />
+  </search_bar>
+  
+  <ul id="character-list"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
