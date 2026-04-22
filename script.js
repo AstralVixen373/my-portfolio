@@ -4,6 +4,8 @@ const descInput = document.getElementById("description");
 const list = document.getElementById("character-list");
 const cancelBtn = document.getElementById("cancel-edit");
 const searchInput = document.getElementById("search");
+const exportBtn = document.getElementById("export-data");
+const importFile = document.getElementById("import-file");
 
 let characters = JSON.parse(localStorage.getItem("characters")) || [];
 
@@ -79,6 +81,34 @@ cancelBtn.addEventListener("click", () => {
 });
 
 searchInput.addEventListener("input", renderCharacters);
+
+exportBtn.addEventListener("click", () => {
+  const data = JSON.stringify(characters, null, 2);
+
+  const blob = new Blob([data], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "characters.json";
+  a.click();
+
+  URL.revokeObjectURL(url);
+});
+
+importFile.addEventListener("change", (e) => {
+  const file = e.target.files[0];
+
+  const reader = new FileReader();
+
+  reader.onload = (event) => {
+    characters = JSON.parse(event.target.result);
+
+    renderCharacters();
+  };
+
+  reader.readAsText(file);
+});
 
 function renderCharacters() {
   list.innerHTML = "";

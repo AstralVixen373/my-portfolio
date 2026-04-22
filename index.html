@@ -7,7 +7,15 @@
 </head>
 <body>
 
-  <h1>My Characters</h1>
+  <div class="top-bar">
+    <h1>My Story Characters</h1>
+  </div>
+
+  <div class="toolbar">
+    <label for="import-file" class="btn">Import</label>
+    <input type="file" id="import-file" />
+    <button id="export-data">Export</button>
+  </div>
 
   <form id="character-form">
     <input type="text" id="name" placeholder="Character name" required />
@@ -15,11 +23,11 @@
     <button type="submit">Add character</button>
     <button type="button" id="cancel-edit" style="display:none;">Cancel</button>
   </form>
-  
+
   <search_bar>
     <input type="text" id="search" placeholder="Search characters..." />
   </search_bar>
-  
+
   <ul id="character-list"></ul>
 
   <script src="script.js"></script>
