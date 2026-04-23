@@ -17,16 +17,19 @@ The goal of this project is to practice:
 
 - Add / Edit / Delete a character (name + description)
 - Display list of characters
-- Add / Edit / Delete storylines ideas and draft scenes (title + content)
-- Display list of storylines and draft scenes
+- Add / Edit / Delete storylines Chapters and scenes (title + content)
+- Display list of Chapters and scenes
+- Add / Edit / Delete locations (title + content)
+- Display list of locations
 - Persistent storage using localStorage
 
 ### Bonus features
 
-- Search/filter characters
+- Search/filter objects
 - Export data as JSON file
 - Import data from JSON file
 - Responsive UI design
+- Multi-page MPA navigation
 - Card-based layout with hover effects
 
 ## Tech Stack
@@ -48,16 +51,6 @@ Each character is stored as:
 }
 ```
 
-Each storyline or draft scenes are stored as:
-
-```js
-{
-  id: number,
-  title: string,
-  content: string
-}
-```
-
 ## Application Architecture
 
 ### Core functions
@@ -75,7 +68,7 @@ loadFromLocalStorage() → loads saved data
 
 ### 1. Clone the repository
 ```js
-git clone https://github.com/your-username/story-builder.git
+git clone git@github.com:AstralVixen373/my-portfolio.git
 ```
 
 ### 2. Open the project folder
@@ -85,77 +78,75 @@ git clone https://github.com/your-username/story-builder.git
 ## Project structure
 ```js
 story-builder/
-│
-├── index.html              # Home / dashboard
-├── characters.html         # Characters module
-├── scenes.html             # Chapters / scenes module
-├── locations.html          # Worldbuilding module
-│
 ├── css/
-│   └── style.css           # Global styles (shared across all pages)
-│
-├── js/
-│   ├── shared.js           # Storage + utilities
-│   ├── characters.js       # Characters logic
-│   ├── scenes.js           # Scenes logic (future)
-│   └── locations.js        # Locations logic (future)
-│
-├── assets/
-│   ├── icons/
-│   └── images/
-│
-└── README.md
+    ├── index.html              # Home / dashboard
+    ├── characters.html         # Characters module
+    ├── scenes.html             # Chapters / scenes module
+    ├── locations.html          # Worldbuilding module
+    │
+    ├── css/
+    │   └── style.css           # Global styles (shared across all pages)
+    │
+    ├── js/
+    │   ├── shared.js           # Storage + utilities
+    │   ├── characters.js       # Characters logic
+    │   ├── scenes.js           # Scenes logic (future)
+    │   └── locations.js        # Locations logic (future)
+    │
+    ├── assets/
+    │   ├── icons/
+    │   └── images/
+    │
+    └── README.md
 ```
 
 ## Development Checklist
 
 ### Day 0 — Planning
-- Define project idea
-- Define MVP features
-- Define bonus features
-- Define data model
-- Create project files
-- Plan functions structure
+- Defined project idea
+- Defined MVP features
+- Defined bonus features
+- Defined basic data model for characters
+- Created basic project files
+- Planned functions structure
 
-### Day 1 — Core foundation
-- Build HTML structure (form + list)
-- Create characters array
-- Implement add character
-- Implement render function
-- Ensure UI updates correctly
+### Day 1 — Core foundation + Edit/Delete system
+- Built HTML structure for characters' page (form + list)
+- Created characters array
+- Implemented add character
+- Implemented render function
+- Ensured UI updated correctly
+- Added edit mode state
+  - Loads data into form
+  - Updates existing character
+- Added delete button per item
+  - Implements event delegation
+  - Removes from array
+  - Syncs with UI + localStorage
 
-### Day 2 — Delete system
-- Add delete button per item
-- Implement event delegation
-- Remove from array
-- Sync with UI + localStorage
-
-### Day 3 — Edit system
-- Add edit mode state
-- Load data into form
-- Update existing character
-- Reset edit mode after submit
-
-### Day 4 — UI improvements
+### Day 2 — UI improvements
 - Card layout instead of list
 - Spacing system
 - Hover effects
 - Remove bullet points
 - Centered container layout
 
-### Day 5 — Search system
+### Day 3 — Import / Export + Search system
+- localStorage load/save working
+- Export JSON file
+- Import JSON file
+- Replace state + re-render
 - Add search input
 - Filter characters dynamically
 - Keep original array intact
 - Update render logic
 
-### Day 6 — Import / Export + persistence
-- localStorage load/save working
-- Export JSON file
-- Import JSON file
-- Replace state + re-render
+### Day 4 — Restructured into a multi-page MPA navigation system
+- Restructured project's architecture
+- Created separate html and js files to accomodate the home page, the scenes page and the locations page
+- Started coding home page
 
-### Day 7 — Final polish
+### Day ? — Final polish
 - UI consistency check
 - Fix spacing and alignment
 - Add empty state message
@@ -163,15 +154,16 @@ story-builder/
 - Bug fixes
 
 ### Testing Checklist
-- Add character works
-- Edit character works
-- Delete character works
-- Refresh keeps data
+- Add character/scene/location works
+- Edit character/scene/location works
+- Delete character/scene/location works
+- Refresh = keeps data
 - Import works
 - Export works
 - Search works correctly
+- Navigation between pages works correctly
 
-### Future Improvements
+### Possible future Improvements
 - Authentication system
 - Backend storage (Rails integration)
 - Categories/tags system
