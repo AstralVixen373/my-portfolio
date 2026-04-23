@@ -86,10 +86,24 @@ git clone https://github.com/your-username/story-builder.git
 ```js
 story-builder/
 │
-├── lib/ 
-│   ├── index.html
-│   ├── style.css
-│   ├── script.js
+├── index.html              # Home / dashboard
+├── characters.html         # Characters module
+├── scenes.html             # Chapters / scenes module
+├── locations.html          # Worldbuilding module
+│
+├── css/
+│   └── style.css           # Global styles (shared across all pages)
+│
+├── js/
+│   ├── shared.js           # Storage + utilities
+│   ├── characters.js       # Characters logic
+│   ├── scenes.js           # Scenes logic (future)
+│   └── locations.js        # Locations logic (future)
+│
+├── assets/
+│   ├── icons/
+│   └── images/
+│
 └── README.md
 ```
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Story Builder</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="top-bar">
+    <h1>My Story Characters</h1>
+  </div>
+
+  <div class="toolbar">
+    <label for="import-file" class="btn">Import</label>
+    <input type="file" id="import-file" />
+    <button id="export-data">Export</button>
+  </div>
+
+  <form id="character-form">
+    <input type="text" id="name" placeholder="Character name" required />
+    <input type="text" id="description" placeholder="Description" required />
+    <button type="submit">Add character</button>
+    <button type="button" id="cancel-edit" style="display:none;">Cancel</button>
+  </form>
+
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="Search characters..." />
+  </div>
+
+  <ul id="character-list"></ul>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
