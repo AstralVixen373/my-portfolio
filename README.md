@@ -41,7 +41,32 @@ The goal of this project is to practice:
 
 ## Data Model
 
+
+
 Each character is stored as:
+
+```js
+{
+  id: number,
+  name: string,
+  description: string
+}
+```
+Each chapter/scene is stored as:
+
+```js
+{
+  id: number,
+  title: string,
+  scenes: [
+    {
+      id: number,
+      title: string,
+      content: string,
+      updatedAt: number
+}
+```
+Each location is stored as:
 
 ```js
 {
@@ -81,7 +106,7 @@ story-builder/
 ├── css/
     ├── index.html              # Home / dashboard
     ├── characters.html         # Characters module
-    ├── scenes.html             # Chapters / scenes module
+    ├── chapters.html           # Chapters / scenes module
     ├── locations.html          # Worldbuilding module
     │
     ├── css/
@@ -90,8 +115,8 @@ story-builder/
     ├── js/
     │   ├── shared.js           # Storage + utilities
     │   ├── characters.js       # Characters logic
-    │   ├── scenes.js           # Scenes logic (future)
-    │   └── locations.js        # Locations logic (future)
+    │   ├── chapters.js         # Chapters / scenes logic
+    │   └── locations.js        # Locations logic
     │
     ├── assets/
     │   ├── icons/
@@ -143,8 +168,8 @@ story-builder/
 
 ### Day 4 — Restructured into a multi-page MPA navigation system
 - Restructured project's architecture
-- Created separate html and js files to accomodate the home page, the scenes page and the locations page
-- Started coding home page
+- Created separate html and js files to accomodate the home page, the chapters page and the locations page
+- Coded home page and started coding chapters page
 
 ### Day ? — Final polish
 - UI consistency check
