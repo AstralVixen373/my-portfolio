@@ -6,9 +6,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
 <div class="app">
-
   <!-- Header -->
   <header class="top-bar">
     <h1>Story Builder</h1>
@@ -18,13 +16,18 @@
   <nav class="main-nav">
     <a href="index.html" class="active">Home</a>
     <a href="characters.html">Characters</a>
-    <a href="scenes.html">Scenes</a>
+    <a href="chapters.html">Chapters</a>
     <a href="locations.html">Locations</a>
   </nav>
 
+  <!-- Tool Bar -->
+  <div class="toolbar">
+    <label for="import-file" class="btn">Import</label>
+    <input type="file" id="import-file" />
+    <button id="export-data">Export</button>
+  </div>
   <!-- Dashboard -->
   <main>
-
     <!-- Navigation Cards -->
     <section class="dashboard-grid">
 
@@ -82,9 +85,7 @@
       <h2>Recent Scenes</h2>
       <ul id="recent-scenes"></ul>
     </section>
-
   </main>
-
 </div>
 
 <script type="module" src="js/home.js"></script>
