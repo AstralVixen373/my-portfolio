@@ -171,6 +171,16 @@ story-builder/
 - Created separate html and js files to accomodate the home page, the chapters page and the locations page
 - Coded home page and started coding chapters page
 
+### Day 5 — Updated App Architecture and generalised features
+- Reorganized directory
+- Updated data map
+- Implemented export/import feature across all MPA
+- Finished the chapters page
+
+### Day 6 — Added a Delete all data feature and the locations page
+- Added a Delete button next to the Import and Export ones, in the toolbar and coded its associated function
+- Coded the locations page
+
 ### Day ? — Final polish
 - UI consistency check
 - Fix spacing and alignment
@@ -183,8 +193,9 @@ story-builder/
 - Edit character/scene/location works
 - Delete character/scene/location works
 - Refresh = keeps data
-- Import works
-- Export works
+- Import works correctly
+- Export works correctly
+- Delete works correctly
 - Search works correctly
 - Navigation between pages works correctly
 
@@ -192,6 +203,7 @@ story-builder/
 - Authentication system
 - Backend storage (Rails integration)
 - Categories/tags system
+- Add more variables to the characters cards
 - Drag and drop ordering
 - Animations and transitions
 
