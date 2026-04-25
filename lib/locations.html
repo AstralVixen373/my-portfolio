@@ -1,16 +1,16 @@
-<!-- Here will be the html code for the locations section -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Story Builder</title>
+  <title>Locations - Story Builder</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <div class="app">
     <!-- Header -->
     <header class="top-bar">
-      <h1>Story Builder</h1>
+      <h1>Locations</h1>
     </header>
 
     <!-- Navigation -->
@@ -26,9 +26,49 @@
       <label for="import-file" class="btn">Import</label>
       <input type="file" id="import-file" />
       <button id="export-data">Export</button>
+      <button class="danger" id="delete-data">Delete</button>
     </div>
+
+    <!-- Form -->
+    <form id="location-form">
+      <input
+        type="text"
+        id="name"
+        placeholder="Location name"
+        required
+      />
+
+      <input
+        type="text"
+        id="description"
+        placeholder="Description"
+        required
+      />
+
+      <button type="submit">Add location</button>
+      <button
+        type="button"
+        id="cancel-edit"
+        style="display:none;"
+      >
+        Cancel
+      </button>
+    </form>
+
+    <!-- Search -->
+    <div class="search-bar">
+      <input
+        type="text"
+        id="search"
+        placeholder="Search locations..."
+      />
+    </div>
+
+    <!-- List -->
+    <ul id="location-list"></ul>
+
   </div>
 
-  <script type="module" src="js/home.js"></script>
+  <script type="module" src="js/locations.js"></script>
 </body>
 </html>
