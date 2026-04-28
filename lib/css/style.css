@@ -16,7 +16,7 @@ body {
 }
 
 /* =========================
-   HEADER / NAV
+   NAVIGATION
 ========================= */
 
 .top-bar {
@@ -51,7 +51,7 @@ body {
 }
 
 /* =========================
-   BUTTON SYSTEM
+   BUTTONS
 ========================= */
 
 button,
@@ -97,7 +97,7 @@ button.danger {
 }
 
 /* =========================
-   FORMS
+   FORMS / INPUTS
 ========================= */
 
 form,
@@ -136,14 +136,12 @@ input:focus {
 }
 
 textarea {
-  min-height: 450px;
+  min-height: 400px;
   max-width: 900px;
-  margin: 0 auto;
-  display: block;
 }
 
 /* =========================
-   LISTS
+   LIST / GRID SYSTEM
 ========================= */
 
 ul {
@@ -154,6 +152,13 @@ ul {
 
 li {
   margin-bottom: 10px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
 }
 
 /* =========================
@@ -178,7 +183,6 @@ li {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
-/* Clamp text preview */
 .card p {
   overflow: hidden;
   display: -webkit-box;
@@ -187,31 +191,9 @@ li {
   -webkit-box-orient: vertical;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-/* Disable hover for non-clickable cards */
-.stat-card:hover,
-.progress-card:hover {
-  transform: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  cursor: default;
-}
-
 /* =========================
-   ACTIONS
+   ACTIONS / BUTTON GROUPS
 ========================= */
-
-.top-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-}
 
 .actions {
   display: flex;
@@ -224,8 +206,15 @@ li {
   font-size: 13px;
 }
 
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
 /* =========================
-   HOME DASHBOARD
+   DASHBOARD (HOME)
 ========================= */
 
 .dashboard-grid {
@@ -253,4 +242,89 @@ li {
 .stat-card h3 {
   font-size: 24px;
   margin: 0;
+}
+
+/* =========================
+   EDITOR LAYOUT
+========================= */
+
+.view {
+  display: flex;
+  flex-direction: column;
+}
+
+.scene-title {
+  margin-bottom: 10px;
+}
+
+.scene-content {
+  min-height: 400px;
+}
+
+/* =========================
+   TITLE EDITOR (CHAPTER STYLE)
+========================= */
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0 20px;
+}
+
+.title-wrapper h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.title-input {
+  display: none;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.edit-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0;
+}
+
+/* =========================
+   LINKS SYSTEM
+========================= */
+
+.links {
+  margin-top: 20px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+}
+
+.link-tag {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 8px;
+  margin-top: 5px;
+  background: #f2f2f2;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.link-tag button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: red;
+}
+
+/* =========================
+   UTILITIES
+========================= */
+
+.hidden {
+  display: none !important;
 }

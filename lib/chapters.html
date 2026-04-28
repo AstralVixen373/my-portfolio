@@ -7,6 +7,7 @@
 </head>
 <body>
   <div class="app">
+
     <!-- Header -->
     <header class="top-bar">
       <h1>Chapters</h1>
@@ -20,14 +21,17 @@
       <a href="locations.html">Locations</a>
     </nav>
 
-    <!-- Tool Bar -->
+    <!-- Toolbar -->
     <div class="toolbar">
       <label for="import-file" class="btn">Import</label>
       <input type="file" id="import-file" />
       <button id="export-data">Export</button>
       <button class="danger" id="delete-data">Delete</button>
     </div>
-    <main id="view"></main>
+
+    <!-- Main View -->
+    <main id="view" class="view"></main>
+
   </div>
 
   <script type="module" src="js/chapters.js"></script>

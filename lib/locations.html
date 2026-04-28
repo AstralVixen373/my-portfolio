@@ -2,24 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Locations - Story Builder</title>
+  <title>Locations</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
+
   <div class="app">
+
     <!-- Header -->
     <header class="top-bar">
       <h1>Locations</h1>
     </header>
-
-    <!-- Navigation -->
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="characters.html">Characters</a>
-      <a href="chapters.html">Chapters</a>
-      <a href="locations.html" class="active">Locations</a>
-    </nav>
 
     <!-- Tool Bar -->
     <div class="toolbar">
@@ -29,43 +22,16 @@
       <button class="danger" id="delete-data">Delete</button>
     </div>
 
-    <!-- Form -->
-    <form id="location-form">
-      <input
-        type="text"
-        id="name"
-        placeholder="Location name"
-        required
-      />
+    <!-- Nav -->
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="characters.html">Characters</a>
+      <a href="chapters.html">Chapters</a>
+      <a href="locations.html" class="active">Locations</a>
+    </nav>
 
-      <input
-        type="text"
-        id="description"
-        placeholder="Description"
-        required
-      />
-
-      <button type="submit">Add location</button>
-      <button
-        type="button"
-        id="cancel-edit"
-        style="display:none;"
-      >
-        Cancel
-      </button>
-    </form>
-
-    <!-- Search -->
-    <div class="search-bar">
-      <input
-        type="text"
-        id="search"
-        placeholder="Search locations..."
-      />
-    </div>
-
-    <!-- List -->
-    <ul id="location-list"></ul>
+    <!-- Main View -->
+    <main id="view" class="view"></main>
 
   </div>
 
