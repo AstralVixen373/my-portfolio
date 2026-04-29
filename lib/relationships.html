@@ -2,27 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Chapters - Story Builder</title>
+  <title>Characters</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
   <div class="app">
 
     <!-- Header -->
     <header class="top-bar">
-      <h1>Chapters</h1>
+      <h1>Relationships</h1>
     </header>
 
     <!-- Navigation Bar -->
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="characters.html">Characters</a>
-      <a href="relationships.html">Relationships Graph</a>
+      <a href="relationships.html" class="active">Relationships Graph</a>
       <a href="locations.html">Locations</a>
-      <a href="chapters.html" class="active">Chapters</a>
+      <a href="chapters.html">Chapters</a>
     </nav>
 
-    <!-- Toolbar -->
+    <!-- Tool Bar -->
     <div class="toolbar">
       <label for="import-file" class="btn">Import</label>
       <input type="file" id="import-file" />
@@ -30,11 +31,11 @@
       <button class="danger" id="delete-data">Delete</button>
     </div>
 
-    <!-- Main View -->
-    <main id="view" class="view"></main>
+    <!-- Graph View -->
+    <div id="graph-view"></div>
 
   </div>
 
-  <script type="module" src="js/chapters.js"></script>
+  <script type="module" src="js/relationships.js"></script>
 </body>
 </html>
